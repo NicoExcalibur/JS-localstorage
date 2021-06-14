@@ -4,7 +4,13 @@ const items = [];
 
 function addItem(e) {
   e.preventDefault();
-  console.log("Hello");
+  const text = this.querySelector("[name=item]").value;
+  const item = {
+    text,
+    done: false,
+  };
+  this.reset();
+  console.log(item);
 }
 
 addItems.addEventListener("submit", addItem);
